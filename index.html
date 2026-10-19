@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>顧翠琴老師 - 深耕教育 ‧ 點亮自主學習靈魂</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emeraldBrand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        },
+                        amberWarm: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'sans-serif'],
+                        serif: ['Noto Serif TC', 'serif'],
+                    }
+                }
+            },
+            darkMode: 'class'
+        }
+    </script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(20, 83, 45, 0.94) 0%, rgba(15, 23, 42, 0.9) 100%),
+                        url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=1600&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+        .quote-bg {
+            background: linear-gradient(to right, rgba(22, 101, 52, 0.05), rgba(245, 158, 11, 0.05));
+        }
+    </style>
+</head>
+<body class="font-sans bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 antialiased selection:bg-emeraldBrand-600 selection:text-white transition-colors duration-300">
+
+    <!-- Top Navigation Bar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-sm border-b border-slate-100 dark:border-slate-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 sm:h-20 items-center">
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-emeraldBrand-700 text-white flex items-center justify-center font-serif font-bold text-lg shadow-md group-hover:bg-emeraldBrand-800 transition">
+                        顧
+                    </div>
+                    <div>
+                        <span class="block text-base sm:text-lg font-bold text-slate-900 dark:text-white font-serif leading-tight">顧翠琴 老師</span>
+                        <span class="block text-xs font-medium text-emeraldBrand-700 dark:text-emeraldBrand-200 tracking-wider">深美國小教師 ‧ 教育引路人</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu Links -->
+                <div class="hidden md:flex items-center space-x-6 text-sm font-medium">
+                    <a href="#about" class="text-slate-600 dark:text-slate-300 hover:text-emeraldBrand-700 dark:hover:text-amberWarm-400 transition">關於顧老師</a>
+                    <a href="#experience" class="text-slate-600 dark:text-slate-300 hover:text-emeraldBrand-700 dark:hover:text-amberWarm-400 transition">完整資歷</a>
+                    <a href="#philosophy" class="text-slate-600 dark:text-slate-300 hover:text-emeraldBrand-700 dark:hover:text-amberWarm-400 transition">教育理念與實踐</a>
+                    <a href="#media" class="text-slate-600 dark:text-slate-300 hover:text-emeraldBrand-700 dark:hover:text-amberWarm-400 transition">影音與報導專區</a>
+                    <a href="#contact-form" class="text-slate-600 dark:text-slate-300 hover:text-emeraldBrand-700 dark:hover:text-amberWarm-400 transition">線上留言</a>
+                    
+                    <!-- Theme Toggle Button -->
+                    <button id="theme-toggle-btn" class="p-2 text-slate-600 dark:text-slate-300 hover:text-amberWarm-500 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition" aria-label="切換深淺模式">
+                        <i id="theme-icon" class="fa-solid fa-moon text-lg"></i>
+                    </button>
+                    
+                    <a href="#connect" class="bg-emeraldBrand-700 hover:bg-emeraldBrand-800 text-white px-5 py-2.5 rounded-full shadow-md hover:shadow-lg transition">社群與連結</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center gap-2">
+                    <button id="mobile-theme-btn" class="p-2 text-slate-600 dark:text-slate-300 hover:text-amberWarm-500 rounded-full" aria-label="切換深淺模式">
+                        <i id="mobile-theme-icon" class="fa-solid fa-moon text-lg"></i>
+                    </button>
+                    <button id="mobile-menu-btn" class="p-2 text-slate-700 dark:text-slate-200 focus:outline-none" aria-label="開啟選單">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#about" class="block py-2 text-slate-700 dark:text-slate-200 font-medium hover:text-emeraldBrand-600">關於顧老師</a>
+            <a href="#experience" class="block py-2 text-slate-700 dark:text-slate-200 font-medium hover:text-emeraldBrand-600">完整資歷</a>
+            <a href="#philosophy" class="block py-2 text-slate-700 dark:text-slate-200 font-medium hover:text-emeraldBrand-600">教育理念與實踐</a>
+            <a href="#media" class="block py-2 text-slate-700 dark:text-slate-200 font-medium hover:text-emeraldBrand-600">影音與報導專區</a>
+            <a href="#contact-form" class="block py-2 text-slate-700 dark:text-slate-200 font-medium hover:text-emeraldBrand-600">線上留言</a>
+            <a href="#connect" class="block py-2 text-emeraldBrand-700 dark:text-emeraldBrand-400 font-bold">社群與連結</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative text-white pt-32 pb-20 md:pt-40 md:pb-28 px-4 hero-gradient">
+        <div class="max-w-5xl mx-auto text-center relative z-10 space-y-6">
+            <span class="inline-block bg-amberWarm-500/20 text-amberWarm-400 border border-amberWarm-500/30 text-xs sm:text-sm px-4 py-1.5 rounded-full font-semibold tracking-wider backdrop-blur-sm shadow-sm">
+                <i class="fa-solid fa-seedling mr-2"></i>深耕教育 ‧ 共好同行
+            </span>
+            <h1 class="text-3xl sm:text-5xl md:text-6xl font-black font-serif tracking-tight leading-tight drop-shadow-md">
+                培育喜歡閱讀與自主學習的孩子 <br>
+                <span class="text-amberWarm-400">「深信共好，才能讓教育良性發展」</span>
+            </h1>
+            <p class="text-base sm:text-xl text-slate-200 max-w-3xl mx-auto font-light leading-relaxed drop-shadow">
+                從特教班到普通班，累積長達 20 年豐富行政主任經驗，持續透過公開課堂、自主學習實驗教育與跨校共備，為基隆教育與下一代注入無窮動能。
+            </p>
+            
+            <div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#about" class="bg-amberWarm-500 hover:bg-amberWarm-600 text-slate-900 font-bold px-8 py-3.5 rounded-xl shadow-lg hover:shadow-xl transition transform hover:-translate-y-0.5 text-center">
+                    認識顧翠琴老師
+                </a>
+                <a href="#media" class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 font-medium px-8 py-3.5 rounded-xl transition text-center">
+                    觀看影音與媒體報導
+                </a>
+            </div>
+        </div>
+        
+        <!-- Bottom Wave Transition -->
+        <div class="absolute bottom-0 left-0 right-0 h-10 bg-slate-50 dark:bg-slate-900 [clip-path:polygon(0_100%,100%_100%,100%_0)] transition-colors duration-300"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-xs sm:text-sm font-bold text-emeraldBrand-600 dark:text-amberWarm-400 tracking-widest uppercase mb-2">About Teacher Ku</h2>
+            <p class="text-3xl sm:text-4xl font-extrabold font-serif text-slate-900 dark:text-white">教育路上 ‧ 莫忘初衷</p>
+            <div class="w-16 h-1 bg-amberWarm-500 mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="grid md:grid-cols-12 gap-8 items-center">
+            <!-- Left Info Card -->
+            <div class="md:col-span-5 bg-white dark:bg-slate-800 p-8 rounded-3xl border border-slate-100 dark:border-slate-700 shadow-xl space-y-6">
+                <div class="flex items-center gap-4 border-b border-slate-100 dark:border-slate-700 pb-6">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-emeraldBrand-600 to-emeraldBrand-800 text-white flex items-center justify-center font-serif font-black text-2xl shadow-lg shrink-0">
+                        顧
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold font-serif text-slate-900 dark:text-white">顧翠琴 老師</h3>
+                        <p class="text-emeraldBrand-700 dark:text-amberWarm-400 text-sm font-medium mt-0.5">基隆市信義區深美國民小學教師</p>
+                    </div>
+                </div>
+
+                <div class="space-y-4 text-sm text-slate-600 dark:text-slate-300">
+                    <div class="flex items-start gap-3">
+                        <i class="fa-solid fa-graduation-cap text-emeraldBrand-600 dark:text-amberWarm-400 mt-1"></i>
+                        <div>
+                            <strong class="text-slate-900 dark:text-white">學歷：</strong>
+                            <span>國立臺北師範學院（現國立臺北教育大學）學士</span>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i class="fa-solid fa-briefcase text-emeraldBrand-600 dark:text-amberWarm-400 mt-1"></i>
+                        <div>
+                            <strong class="text-slate-900 dark:text-white">完整經歷：</strong>
+                            <span>導師、組長、主任（教務、學務、總務、輔導長達 20 年）</span>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i class="fa-solid fa-school text-emeraldBrand-600 dark:text-amberWarm-400 mt-1"></i>
+                        <div>
+                            <strong class="text-slate-900 dark:text-white">現職：</strong>
+                            <span>基隆市信義區深美國民小學教師</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-2">
+                    <a href="https://www.facebook.com/kukukuku.klkl" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-medium transition shadow-sm">
+                        <i class="fa-brands fa-facebook"></i> 造訪 Facebook 粉絲專頁
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Bio Paragraph -->
+            <div class="md:col-span-7 space-y-6">
+                <div class="bg-emeraldBrand-50/50 dark:bg-slate-800/50 p-6 sm:p-8 rounded-3xl border border-emeraldBrand-100 dark:border-slate-700">
+                    <h3 class="text-2xl font-bold font-serif text-slate-900 dark:text-white mb-4 flex items-center gap-3">
+                        <i class="fa-solid fa-heart text-amberWarm-500"></i> 全方位扎實經驗 ‧ 跨足教學與行政
+                    </h3>
+                    <p class="text-slate-700 dark:text-slate-300 leading-relaxed text-base sm:text-lg">
+                        顧翠琴老師教學足跡從<strong>特教班到普通班</strong>、從<strong>低年級至高年級</strong>；行政工作歷經教務、學務、總務、輔導等各處室組長及主任，累積長達 <strong>20 年行政資歷</strong>，資歷極為完整深刻。
+                    </p>
+                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed mt-4 text-sm sm:text-base">
+                        早在民國 87 年（1998年），顧老師便積極進行語文教學與學生自主學習的實驗教育，更參與自然科實驗教材實作評量、數學科多元評量、美勞科、環保教育、基隆市鄉土教材及全國教師會社會科自編教材設計。
+                    </p>
+                </div>
+
+                <!-- Stats Grid -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                    <div class="bg-white dark:bg-slate-800 p-4 rounded-2xl border border-slate-100 dark:border-slate-700 text-center shadow-sm">
+                        <div class="text-2xl sm:text-3xl font-extrabold text-emeraldBrand-700 dark:text-amberWarm-400 font-serif">20+ 年</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">教訓總輔主任經歷</div>
+                    </div>
+                    <div class="bg-white dark:bg-slate-800 p-4 rounded-2xl border border-slate-100 dark:border-slate-700 text-center shadow-sm">
+                        <div class="text-2xl sm:text-3xl font-extrabold text-amberWarm-500 font-serif">87 年起</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">推動自主學習實驗</div>
+                    </div>
+                    <div class="bg-white dark:bg-slate-800 p-4 rounded-2xl border border-slate-100 dark:border-slate-700 text-center shadow-sm col-span-2 sm:col-span-1">
+                        <div class="text-2xl sm:text-3xl font-extrabold text-emeraldBrand-700 dark:text-amberWarm-400 font-serif">跨校陪伴</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">讀書會與共備公開課</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline Section -->
+    <section id="experience" class="py-20 bg-slate-100/70 dark:bg-slate-950/80 px-4 transition-colors duration-300">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-xs sm:text-sm font-bold text-emeraldBrand-600 dark:text-amberWarm-400 tracking-widest uppercase mb-2">Career & Milestone</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold font-serif text-slate-900 dark:text-white">完整教育資歷與專長推動</p>
+                <div class="w-16 h-1 bg-amberWarm-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="relative border-l-2 border-emeraldBrand-600/30 dark:border-slate-700 ml-4 md:ml-32 space-y-12">
+                <!-- Timeline Item 1 -->
+                <div class="relative pl-8 md:pl-10">
+                    <div class="absolute -left-3 top-0.5 w-6 h-6 rounded-full bg-emeraldBrand-600 text-white flex items-center justify-center text-xs shadow-md">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                    </div>
+                    <span class="md:absolute md:-left-32 md:top-0 text-sm font-bold text-emeraldBrand-700 dark:text-amberWarm-400 mb-2 md:mb-0 block">
+                        全方位教學體驗
+                    </span>
+                    <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-md border border-slate-100 dark:border-slate-700">
+                        <h3 class="text-xl font-bold font-serif text-slate-900 dark:text-white mb-2">多元班級與跨階段教學實踐</h3>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                            帶領特教班至普通班，涵蓋小學低年級、中年級至高年級完整階段。針對不同能力與成長階段的孩子，靈活設計具針對性且富啟發性的教學方案。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="relative pl-8 md:pl-10">
+                    <div class="absolute -left-3 top-0.5 w-6 h-6 rounded-full bg-amberWarm-500 text-white flex items-center justify-center text-xs shadow-md">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <span class="md:absolute md:-left-32 md:top-0 text-sm font-bold text-amberWarm-600 dark:text-amberWarm-400 mb-2 md:mb-0 block">
+                        20 年行政奉獻
+                    </span>
+                    <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-md border border-slate-100 dark:border-slate-700">
+                        <h3 class="text-xl font-bold font-serif text-slate-900 dark:text-white mb-2">教訓總輔四處室主任與組長歷練</h3>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                            歷任教務主任、學務主任、總務主任、輔導主任及各項組長職責。深諳校務運作、課程規劃、特教輔導與校園環境營造，具備開闊的校務視角與強大行政協調力。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="relative pl-8 md:pl-10">
+                    <div class="absolute -left-3 top-0.5 w-6 h-6 rounded-full bg-emeraldBrand-600 text-white flex items-center justify-center text-xs shadow-md">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <span class="md:absolute md:-left-32 md:top-0 text-sm font-bold text-emeraldBrand-700 dark:text-amberWarm-400 mb-2 md:mb-0 block">
+                        民國 87 年起
+                    </span>
+                    <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-md border border-slate-100 dark:border-slate-700">
+                        <h3 class="text-xl font-bold font-serif text-slate-900 dark:text-white mb-2">前瞻實驗教育與自編教材發展</h3>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                            早期即投身語文自主學習實驗教育，積極參與自然科實作評量、數學多元評量、環保教育、基隆鄉土教材及全國教師會社會科自編教材開發，引領創新教學風潮。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 4 -->
+                <div class="relative pl-8 md:pl-10">
+                    <div class="absolute -left-3 top-0.5 w-6 h-6 rounded-full bg-amberWarm-500 text-white flex items-center justify-center text-xs shadow-md">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <span class="md:absolute md:-left-32 md:top-0 text-sm font-bold text-amberWarm-600 dark:text-amberWarm-400 mb-2 md:mb-0 block">
+                        深耕至今
+                    </span>
+                    <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-md border border-slate-100 dark:border-slate-700">
+                        <h3 class="text-xl font-bold font-serif text-slate-900 dark:text-white mb-2">公開觀議課 ‧ 跨校社群與親子共讀</h3>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                            開放課堂協助學術研究與教師升等觀察，持續組織跨校教師讀書會與共備團體，並帶領親子及家長讀書會，串連學校與家庭，實踐教育共好價值。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Educational Philosophy Section -->
+    <section id="philosophy" class="py-20 bg-slate-100 dark:bg-slate-950 px-4 transition-colors duration-300">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-xs sm:text-sm font-bold text-emeraldBrand-600 dark:text-amberWarm-400 tracking-widest uppercase mb-2">Core Philosophy</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold font-serif text-slate-900 dark:text-white">教育理念與實踐亮點</p>
+                <div class="w-16 h-1 bg-amberWarm-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Philosophy Card 1 -->
+                <div class="bg-white dark:bg-slate-900 p-8 rounded-3xl shadow-md border border-slate-200/80 dark:border-slate-800 flex flex-col justify-between hover:shadow-xl transition">
+                    <div>
+                        <div class="w-12 h-12 bg-emeraldBrand-50 dark:bg-slate-800 text-emeraldBrand-600 dark:text-amberWarm-400 rounded-2xl flex items-center justify-center text-xl mb-6">
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-serif text-slate-900 dark:text-white mb-3">閱讀理解與自主學習</h3>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                            關注以「學生學習」為主的教學模式，以增進閱讀理解能力、培養喜歡閱讀的孩子為核心目標，對提升學生學習動機與能力有豐富心得。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Philosophy Card 2 -->
+                <div class="bg-white dark:bg-slate-900 p-8 rounded-3xl shadow-md border border-slate-200/80 dark:border-slate-800 flex flex-col justify-between hover:shadow-xl transition">
+                    <div>
+                        <div class="w-12 h-12 bg-amberWarm-50 dark:bg-slate-800 text-amberWarm-500 rounded-2xl flex items-center justify-center text-xl mb-6">
+                            <i class="fa-solid fa-hand-pointer"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-serif text-slate-900 dark:text-white mb-3">做選擇與自主能力</h3>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                            深信「做選擇」是孩子獨立思考與負責任的起點，引導學生在日常課堂中建立自主學習習慣與獨立探索問題的能力。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Philosophy Card 3 -->
+                <div class="bg-white dark:bg-slate-900 p-8 rounded-3xl shadow-md border border-slate-200/80 dark:border-slate-800 flex flex-col justify-between hover:shadow-xl transition">
+                    <div>
+                        <div class="w-12 h-12 bg-emeraldBrand-50 dark:bg-slate-800 text-emeraldBrand-600 dark:text-amberWarm-400 rounded-2xl flex items-center justify-center text-xl mb-6">
+                            <i class="fa-solid fa-door-open"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-serif text-slate-900 dark:text-white mb-3">開放課堂與觀議課</h3>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                            多年前即公開課堂讓教師觀課，以協同教學機制帶領同儕實踐，並開放課堂協助碩博士生及教授升等論文的訪問與實地觀察。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Philosophy Card 4 -->
+                <div class="bg-white dark:bg-slate-900 p-8 rounded-3xl shadow-md border border-slate-200/80 dark:border-slate-800 flex flex-col justify-between hover:shadow-xl transition">
+                    <div>
+                        <div class="w-12 h-12 bg-amberWarm-50 dark:bg-slate-800 text-amberWarm-500 rounded-2xl flex items-center justify-center text-xl mb-6">
+                            <i class="fa-solid fa-users-rectangle"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-serif text-slate-900 dark:text-white mb-3">跨校夥伴與共備團體</h3>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                            專業協助擴及校內同儕與跨校夥伴，積極組織跨校教師讀書會、共備觀議課聚會，帶動教師群體的共同躍升。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Philosophy Card 5 -->
+                <div class="bg-white dark:bg-slate-900 p-8 rounded-3xl shadow-md border border-slate-200/80 dark:border-slate-800 flex flex-col justify-between hover:shadow-xl transition">
+                    <div>
+                        <div class="w-12 h-12 bg-emeraldBrand-50 dark:bg-slate-800 text-emeraldBrand-600 dark:text-amberWarm-400 rounded-2xl flex items-center justify-center text-xl mb-6">
+                            <i class="fa-solid fa-people-roof"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-serif text-slate-900 dark:text-white mb-3">親子與家長讀書會</h3>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                            教育延伸至家庭，親自帶領家長與親子讀書會，深化親師合作與共讀氛圍，讓教育成為家庭共同成長的契機。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Philosophy Card 6 -->
+                <div class="bg-white dark:bg-slate-900 p-8 rounded-3xl shadow-md border border-slate-200/80 dark:border-slate-800 flex flex-col justify-between hover:shadow-xl transition">
+                    <div>
+                        <div class="w-12 h-12 bg-amberWarm-50 dark:bg-slate-800 text-amberWarm-500 rounded-2xl flex items-center justify-center text-xl mb-6">
+                            <i class="fa-solid fa-hand-holding-heart"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-serif text-slate-900 dark:text-white mb-3">深信「共好」價值</h3>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                            多年的教學實踐始終秉持溫暖信念：「盡力影響週遭人事物，深信共好才能促進整個教育環境良性發展。」
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media & News Section -->
+    <section id="media" class="py-20 px-4 max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-xs sm:text-sm font-bold text-emeraldBrand-600 dark:text-amberWarm-400 tracking-widest uppercase mb-2">Media & Podcasts</h2>
+            <p class="text-3xl sm:text-4xl font-extrabold font-serif text-slate-900 dark:text-white">影音研討、Podcast 與報導訪談</p>
+            <p class="text-slate-600 dark:text-slate-400 mt-2 text-sm sm:text-base">收錄顧翠琴老師參與之專題演講、課程分享、廣播對談與報導</p>
+            <div class="w-16 h-1 bg-amberWarm-500 mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Video Item 1 -->
+            <div class="bg-white dark:bg-slate-800 rounded-3xl border border-slate-100 dark:border-slate-700 shadow-xl overflow-hidden flex flex-col justify-between hover:shadow-2xl transition duration-300">
+                <div>
+                    <div class="relative aspect-video bg-black">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/D8VdJwp98ms" title="【臺灣燈塔教育節】李欣蓉、顧翠琴—20年前的基隆教育實驗，就在帶領孩子自主學習？" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block bg-red-100 dark:bg-red-950/60 text-red-600 dark:text-red-400 text-xs px-3 py-1 rounded-full font-semibold mb-3">
+                            <i class="fa-brands fa-youtube mr-1"></i> 臺灣燈塔教育節
+                        </span>
+                        <h3 class="text-xl font-bold font-serif text-slate-900 dark:text-white mb-2">
+                            20年前的基隆教育實驗，就在帶領孩子自主學習？
+                        </h3>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                            主講人：李欣蓉、顧翠琴老師。分享 20 年前在基隆開展的教育實驗，探讨如何陪伴與引導孩子建立自主學習動能。
+                        </p>
+                    </div>
+                </div>
+                <div class="px-6 pb-6">
+                    <a href="https://www.youtube.com/watch?v=D8VdJwp98ms" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-red-600 dark:text-red-400 hover:underline font-medium text-sm">
+                        在 YouTube 上觀看 <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Video Item 2 -->
+            <div class="bg-white dark:bg-slate-800 rounded-3xl border border-slate-100 dark:border-slate-700 shadow-xl overflow-hidden flex flex-col justify-between hover:shadow-2xl transition duration-300">
+                <div>
+                    <div class="relative aspect-video bg-black">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/1T3MSM8wWJw" title="【課程分享】經典課程再現-自主學習：自主學習在深美" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block bg-red-100 dark:bg-red-950/60 text-red-600 dark:text-red-400 text-xs px-3 py-1 rounded-full font-semibold mb-3">
+                            <i class="fa-brands fa-youtube mr-1"></i> 中小學前導學校聯合研討會
+                        </span>
+                        <h3 class="text-xl font-bold font-serif text-slate-900 dark:text-white mb-2">
+                            經典課程再現 - 自主學習：自主學習在深美
+                        </h3>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                            基隆市深美國小 顧翠琴老師、林淑均老師。分享深美國小如何將「自主學習」落實於課堂教學中的經驗與成果。
+                        </p>
+                    </div>
+                </div>
+                <div class="px-6 pb-6">
+                    <a href="https://www.youtube.com/watch?v=1T3MSM8wWJw" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-red-600 dark:text-red-400 hover:underline font-medium text-sm">
+                        在 YouTube 上觀看 <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Podcast Item -->
+            <div class="bg-white dark:bg-slate-800 rounded-3xl border border-slate-100 dark:border-slate-700 shadow-xl p-6 sm:p-8 flex flex-col justify-between hover:shadow-2xl transition duration-300">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <span class="w-10 h-10 rounded-xl bg-purple-100 dark:bg-purple-900/50 text-purple-600 dark:text-purple-300 flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-podcast"></i>
+                        </span>
+                        <span class="text-xs font-bold text-purple-600 dark:text-purple-300 tracking-wider uppercase">Apple Podcast 專訪</span>
+                    </div>
+                    <h3 class="text-xl font-bold font-serif text-slate-900 dark:text-white">
+                        葛琦霞 ‧ 顧翠琴《爛泥怪》小魯文化對談
+                    </h3>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                        精彩Podcast對談集數，顧翠琴老師與葛琦霞老師深度交流兒童文學、繪本導讀與《爛泥怪》所帶給孩子的思考與閱讀樂趣。
+                    </p>
+                </div>
+                <div class="pt-6">
+                    <a href="https://podcasts.apple.com/us/podcast/%E8%91%9B%E7%90%A6%E9%9C%9E-%E9%A1%A7%E7%BF%A0%E7%90%B4-%E7%88%9B%E6%B3%A5%E6%80%AA-%E5%B0%8F%E9%AD%AF%E6%96%87%E5%8C%96/id1754543457?i=1000714669373" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full bg-purple-600 hover:bg-purple-700 text-white font-medium py-3 rounded-xl transition shadow-sm text-sm">
+                        <i class="fa-solid fa-headphones"></i> 前往 Apple Podcast 收聽對談
+                    </a>
+                </div>
+            </div>
+
+            <!-- News Item -->
+            <div class="bg-white dark:bg-slate-800 rounded-3xl border border-slate-100 dark:border-slate-700 shadow-xl p-6 sm:p-8 flex flex-col justify-between">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <span class="w-10 h-10 rounded-xl bg-amberWarm-50 dark:bg-amberWarm-950/50 text-amberWarm-600 dark:text-amberWarm-400 flex items-center justify-center text-xl">
+                            <i class="fa-regular fa-newspaper"></i>
+                        </span>
+                        <span class="text-xs font-bold text-amberWarm-600 dark:text-amberWarm-400 tracking-wider uppercase">人間福報 報導專區</span>
+                    </div>
+                    <h3 class="text-xl font-bold font-serif text-slate-900 dark:text-white">
+                        人間福報新聞專題報導
+                    </h3>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                        人間福報報導顧翠琴老師對教育的熱情與實踐，記錄老師在基隆深美國小深耕閱讀、陪伴孩子與促進教育良性發展的動人故事。
+                    </p>
+                </div>
+                <div class="pt-6">
+                    <a href="https://www.merit-times.com.tw/NewsPage.aspx?unid=216984" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full bg-amberWarm-500 hover:bg-amberWarm-600 text-slate-900 font-bold py-3 rounded-xl transition shadow-sm text-sm">
+                        <i class="fa-solid fa-newspaper"></i> 閱讀人間福報全文報導
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Online Message / Contact Form Section (Integrated with GAS) -->
+    <section id="contact-form" class="py-20 bg-slate-100 dark:bg-slate-950 px-4 transition-colors duration-300">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-xs sm:text-sm font-bold text-emeraldBrand-600 dark:text-amberWarm-400 tracking-widest uppercase mb-2">Online Message</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold font-serif text-slate-900 dark:text-white">線上交流與研討留言</p>
+                <p class="text-slate-600 dark:text-slate-400 mt-2 text-sm sm:text-base">歡迎留下您的訊息、教學交流或研習邀請，資料將直接傳送至後端系統</p>
+                <div class="w-16 h-1 bg-amberWarm-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 p-8 sm:p-10 rounded-3xl shadow-xl border border-slate-200/80 dark:border-slate-800">
+                <form id="gasMessageForm" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">您的姓名 *</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emeraldBrand-600 transition" placeholder="例如：王小明">
+                        </div>
+                        <div>
+                            <label for="identity" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">身份 / 服務單位</label>
+                            <input type="text" id="identity" name="identity" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emeraldBrand-600 transition" placeholder="例如：某某國小教師 / 家長">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">電子郵件 Email *</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emeraldBrand-600 transition" placeholder="yourname@example.com">
+                        </div>
+                        <div>
+                            <label for="topic" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">諮詢主題</label>
+                            <select id="topic" name="topic" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emeraldBrand-600 transition">
+                                <option value="自主學習與課程開發">自主學習與課程開發</option>
+                                <option value="閱讀理解教學交流">閱讀理解教學交流</option>
+                                <option value="觀議課與跨校共備">觀議課與跨校共備</option>
+                                <option value="親子/家長讀書會">親子/家長讀書會</option>
+                                <option value="其他給顧老師的留言">其他給顧老師的留言</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">留言內容 *</label>
+                        <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emeraldBrand-600 transition" placeholder="請寫下您的想法或欲詢問事項..."></textarea>
+                    </div>
+
+                    <!-- Alert message box -->
+                    <div id="formStatus" class="hidden p-4 rounded-xl text-sm font-medium"></div>
+
+                    <button type="submit" id="submitBtn" class="w-full bg-emeraldBrand-700 hover:bg-emeraldBrand-800 text-white font-bold py-3.5 px-6 rounded-xl shadow-lg transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-paper-plane"></i> <span>確認送出留言</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Connect Section -->
+    <section id="connect" class="py-20 bg-gradient-to-br from-emeraldBrand-900 via-slate-900 to-slate-900 text-white px-4">
+        <div class="max-w-4xl mx-auto text-center space-y-8">
+            <span class="inline-block bg-white/10 text-emeraldBrand-100 text-xs sm:text-sm px-4 py-1.5 rounded-full font-semibold tracking-wider">
+                <i class="fa-solid fa-handshake mr-2"></i>教育共好 ‧ 攜手同行
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold font-serif">
+                與顧翠琴老師交流與互動
+            </h2>
+            <p class="text-slate-300 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
+                不論是關於「自主學習」、「閱讀理解」、「觀議課共備」或是「親子/家長讀書會」，歡迎透過 Facebook 專頁交流對話，共同促進教育環境良性發展。
+            </p>
+
+            <div class="pt-4 flex flex-wrap justify-center gap-4">
+                <a href="https://www.facebook.com/kukukuku.klkl" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3.5 rounded-2xl shadow-lg transition transform hover:-translate-y-0.5">
+                    <i class="fa-brands fa-facebook text-xl"></i> 前往 Facebook 粉絲專頁
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-8 px-4 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center text-xs gap-4">
+            <p>&copy; 顧翠琴老師 個人典範網站. All rights reserved.</p>
+            <p class="text-slate-500">基隆市信義區深美國民小學 ‧ 深耕自主學習與教育共好</p>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Toggle Logic
+        const themeBtn = document.getElementById('theme-toggle-btn');
+        const themeIcon = document.getElementById('theme-icon');
+        const mobileThemeBtn = document.getElementById('mobile-theme-btn');
+        const mobileThemeIcon = document.getElementById('mobile-theme-icon');
+
+        function setTheme(isDark) {
+            if (isDark) {
+                document.documentElement.classList.add('dark');
+                if (themeIcon) themeIcon.className = 'fa-solid fa-sun text-amberWarm-400 text-lg';
+                if (mobileThemeIcon) mobileThemeIcon.className = 'fa-solid fa-sun text-amberWarm-400 text-lg';
+                localStorage.setItem('ku_theme', 'dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+                if (themeIcon) themeIcon.className = 'fa-solid fa-moon text-lg';
+                if (mobileThemeIcon) mobileThemeIcon.className = 'fa-solid fa-moon text-lg';
+                localStorage.setItem('ku_theme', 'light');
+            }
+        }
+
+        function toggleTheme() {
+            const isDark = document.documentElement.classList.contains('dark');
+            setTheme(!isDark);
+        }
+
+        if (themeBtn) themeBtn.addEventListener('click', toggleTheme);
+        if (mobileThemeBtn) mobileThemeBtn.addEventListener('click', toggleTheme);
+
+        // Check Theme Preference
+        const savedTheme = localStorage.getItem('ku_theme');
+        if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            setTheme(true);
+        } else {
+            setTheme(false);
+        }
+
+        // Mobile Menu Drawer Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+
+        // Google Apps Script Form Submission Logic
+        const GAS_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxx7-5phU9FSD6D66vfHtcqz2NMHMOoeX1weCmabv_C8Z6VBC76WYIIvTNPIO0t_sBRNA/exec';
+        const gasForm = document.getElementById('gasMessageForm');
+        const formStatus = document.getElementById('formStatus');
+        const submitBtn = document.getElementById('submitBtn');
+
+        if (gasForm) {
+            gasForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                // UI loading state
+                submitBtn.disabled = true;
+                submitBtn.classList.add('opacity-70', 'cursor-not-allowed');
+                submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> <span>資料傳送中...</span>';
+
+                formStatus.className = 'hidden p-4 rounded-xl text-sm font-medium';
+
+                const formData = new FormData(gasForm);
+                const dataObj = {
+                    timestamp: new Date().toLocaleString('zh-TW'),
+                    name: formData.get('name'),
+                    identity: formData.get('identity'),
+                    email: formData.get('email'),
+                    topic: formData.get('topic'),
+                    message: formData.get('message')
+                };
+
+                // 使用 URLSearchParams 以 x-www-form-urlencoded 格式送出，確保 GAS doPost 能穩定接收與寫入試算表
+                const params = new URLSearchParams();
+                for (const key in dataObj) {
+                    params.append(key, dataObj[key]);
+                }
+
+                fetch(GAS_ENDPOINT, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    body: params.toString()
+                })
+                .then(() => {
+                    formStatus.className = 'p-4 rounded-xl text-sm font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-950/80 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800';
+                    formStatus.innerHTML = '<i class="fa-solid fa-circle-check mr-2"></i> 感謝您的留言！訊息已成功傳送。';
+                    gasForm.reset();
+                })
+                .catch(error => {
+                    console.error('GAS Form Submission Error:', error);
+                    formStatus.className = 'p-4 rounded-xl text-sm font-medium bg-red-100 text-red-800 dark:bg-red-950/80 dark:text-red-300 border border-red-300 dark:border-red-800';
+                    formStatus.innerHTML = '<i class="fa-solid fa-circle-xmark mr-2"></i> 送出失敗，請稍後再試或點擊下方連結透過 Facebook 聯繫。';
+                })
+                .finally(() => {
+                    submitBtn.disabled = false;
+                    submitBtn.classList.remove('opacity-70', 'cursor-not-allowed');
+                    submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> <span>確認送出留言</span>';
+                });
+            });
+        }
+    </script>
+</body>
+</html>
